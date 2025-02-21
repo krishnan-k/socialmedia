@@ -1,0 +1,219 @@
+.navbar-section .navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+.navbar-section .navbar-content .logo img {
+    width: 40px;
+    height: 40px;
+}
+.navbar-section .navbar-content .navigation ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.navbar-section .navbar-content .navigation ul li{
+    list-style: none;
+    padding: 15px 20px;
+    transition: all 0.3s linear;
+    border-radius: 3px;
+}
+.navbar-section .navbar-content .navigation ul li.active{
+    background: #3953fb;
+}
+.navbar-section .navbar-content .navigation ul li.active a{
+    color: white;
+}
+.navbar-section .navbar-content .header-section {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.navbar-section .navbar-content .navigation ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.3s linear;
+    color: black;
+    line-height: normal;
+    font-weight: 600;
+}
+.navbar-section .navbar-content .navigaion-icons svg {
+    font-size: 20px;
+    color: black;
+}
+.navbar-section .navbar-content .navigaion-icons {
+    display: flex;
+    margin-left: 20px;
+}
+.navbar-section .navbar-content .navigaion-icons >*:not(:last-child) {
+    margin-right: 0;
+}
+.search.icon-1 svg {
+    width: 22px;
+    height: 22px;
+    font-size: 10px;
+}
+.navbar-section .navbar-content .input-box,
+.navbar-section .navbar-content .input-box input {
+    width: 100%;
+}
+.navbar-section .navbar-content .input-box input {
+    border-radius: 30px;
+    height: 50px;
+    outline: none;
+    border: none;
+    padding: 12px 12px 12px 42px;
+    background-color: rgb(241, 241, 241);
+}
+button.nav-link.text-uppercase.ms-2.me-2.fw-normal.fx,
+.account_login a{
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: capitalize;
+    font-family: "Poppins", serif;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+}
+.image-section-search .picture-grid {
+    background: white;
+}
+.image-section-search .picture-grid{
+    column-count: 6;
+}
+.navbar-section .navbar-content .icon-1 {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.search-active {
+    overflow: hidden; 
+  }
+.navbar-content{
+    position: relative;
+}
+
+.search-active .navbar-section {
+    z-index: 2;
+    position: relative;
+}
+.image-section-search {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    padding: 30px;
+    background: white;
+    border-radius: 0 0 30px 30px;
+}
+.navbar-section .navbar-content .header-section .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-section .navbar-content .input-box input.form-control::placeholder {
+    font-size: 16px;
+}
+input.form-control::placeholder {
+    text-transform: capitalize;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',    sans-serif;
+}
+.nav-link svg {
+    font-size: 16px;
+}
+.navbar-section .navbar-content .input-box .search-icons {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    color: #767676;
+    transform: translateY(-50%);
+}
+.navbar-section .navbar-content .input-box .search-box {
+    position: relative;
+}
+.navbar-section {
+    padding: 18px 20px;
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-section .logo h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navigation li {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .navigation li.active {
+    font-weight: bold;
+    /* border-bottom: 2px solid #007bff; */
+  }
+  
+  .account-icon button,
+  .account_login a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .account-icon button:hover,
+  .account_login a:hover {
+    color: #007bff;
+  }
+  
+  .account_section p {
+    margin: 0;
+    font-size: 12px;
+  }
+  
+
+@media screen and (max-width: 767px) {
+    .navbar-section .navbar-content{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .navbar-section .navbar-content .input-box{
+        order: 2;
+    }
+}
+@media screen and (max-width: 480px) {
+    .navbar-section .navbar-content{
+        justify-content: center;
+    }
+}

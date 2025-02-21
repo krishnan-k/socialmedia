@@ -1,0 +1,129 @@
+input {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    vertical-align: top;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.4375em;
+    letter-spacing: 0.00938em;
+    color: rgba(0, 0, 0, 0.87);
+    box-sizing: border-box;
+    position: relative;
+    cursor: text;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    border-radius: 4px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    font: inherit;
+    letter-spacing: inherit;
+    color: currentColor;
+    padding: 4px 0 5px;
+    border: 0;
+    box-sizing: content-box;
+    background: none;
+    height: 1.4375em;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    min-width: 0;
+    width: 100%;
+    -webkit-animation-name: mui-auto-fill-cancel;
+    animation-name: mui-auto-fill-cancel;
+    -webkit-animation-duration: 10ms;
+    animation-duration: 10ms;
+    padding: 16.5px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #F9FAFB;
+    margin: 2px 0 30px;
+}
+
+::placeholder {
+    font-size: 14px;
+}
+
+textarea {
+    background: #F9FAFB;
+    min-height: 10rem;
+}
+
+button.btn-submit {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 18px 40px;
+    text-transform: capitalize;
+    background: #3953fb;
+    font-family: "Poppins", serif;
+    margin-top: 25px;
+    text-align: center;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+button.btn-text {
+    text-transform: capitalize;
+    display: block;
+    text-align: center;
+    margin: auto;
+    color: #0000006e;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    letter-spacing: normal;
+}
+
+span.btn-text.btn-submit {
+    color: black;
+}
+
+p.address-login.m-0 {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+span.btn-submit {
+    transition: all 0.3s linear;
+}
+
+span.btn-text.btn-submit:hover {
+    color: #3953fb;
+}
+
+button.btn-text span {
+    font-family: "Poppins", serif;
+}
+
+label.label {
+    font-size: 15px;
+}
+
+span.reg {
+    color: black;
+}
