@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../component-css/ImageGrid.css";
 import { Button, TextField } from "@mui/material";
-import heart from "../images/heart.svg";
-import heart1 from "../images/heart1.png";
 import message from "../images/message.svg";
 import send from "../images/send.svg";
 import { MdDelete } from "react-icons/md";
 import { Bounce, toast, ToastContainer } from "react-toastify";
 import { observer } from "mobx-react-lite";
 import postStore from "../store/PostStore";
-import { FcDislike } from "react-icons/fc";
 import { AiFillLike } from "react-icons/ai";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
@@ -22,7 +19,7 @@ const ImageGridWithCards: React.FC = observer(() => {
     postStore.fetchPosts();
   }, []);
 
-  // Handle comment input change
+  //comment
   const handleCommentChange = (id: string, comment: string) => {
     setNewComment((prevState) => ({ ...prevState, [id]: comment }));
   };

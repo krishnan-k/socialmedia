@@ -19,22 +19,8 @@ const App: React.FC = observer(() => {
       <Navbar />
       <Container maxWidth="lg">
         <Routes>
-          <Route
-            path="/"
-            element={
-              <PrivateRoute>
-                <Home />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/create"
-            element={
-              <PrivateRoute>
-                <AddImage />
-              </PrivateRoute>
-            }
-          />
+          <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>}/>
+          <Route path="/create" element={<PrivateRoute><AddImage /></PrivateRoute>}/>
           <Route path="/register" element={<Registration />} />
           <Route path="/login" element={<Login />} />
         </Routes>

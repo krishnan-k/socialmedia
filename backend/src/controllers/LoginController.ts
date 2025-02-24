@@ -8,19 +8,14 @@ class LoginController {
     const { email, password } = req.body;
 
     try {
-      
       const user = await User.findOne({ email });
       if (!user) {
         return res.status(404).json({ message: "User not found" });
       }
-
-      
       const isPasswordValid = await bcrypt.compare(password, user.password);
       if (!isPasswordValid) {
         return res.status(401).json({ message: "Invalid credentials" });
       }
-
-      
       const token = JwtToken.generateToken({
         id: user._id,
         email: user.email,

@@ -16,7 +16,7 @@ const Login = () => {
         password,
       });
       localStorage.setItem("token", response.data.token);
-      localStorage.setItem("userId", response.data.userId); // Store user ID
+      localStorage.setItem("userId", response.data.userId);
       postStore.setUser(response.data.userId, response.data.token);
       alert("Login successfully");
       navigate("/");

@@ -43,7 +43,7 @@ class PostStore {
           "Content-Type": "application/json",
           Authorization: `Bearer ${this.token}`,
         },
-        body: JSON.stringify({ userId: this.userId }), // Send userId in request
+        body: JSON.stringify({ userId: this.userId }),
       });
   
       if (!response.ok) {
@@ -52,7 +52,7 @@ class PostStore {
   
       const updatedPost = await response.json();
   
-      // Update MobX state with new likes count
+      
       this.posts = this.posts.map((post) =>
         post._id === postId ? { ...post, likes: updatedPost.likes, likedBy: updatedPost.likedBy } : post
       );

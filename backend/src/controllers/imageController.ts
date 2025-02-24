@@ -151,15 +151,13 @@ export const dislikeImage = async (req: Request, res: Response): Promise<void> =
     }
 
     if (image.dislikedBy.includes(userId)) {
-      // If user already disliked, remove dislike
       image.dislikes -= 1;
       image.dislikedBy = image.dislikedBy.filter((user) => user !== userId);
     } else {
-      // Dislike the image
       image.dislikes += 1;
       image.dislikedBy.push(userId);
 
-      // Remove from likes if present
+      
       if (image.likedBy.includes(userId)) {
         image.likes -= 1;
         image.likedBy = image.likedBy.filter((user) => user !== userId);
