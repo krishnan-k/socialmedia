@@ -3,3 +3,12 @@
 body {
   font-family: "Poppins", serif;
 }
+
+@media screen and (max-width: 767px) {
+  .image_section {
+    display: none;
+  }
+}
+.image_section img {
+  border-radius: 10px;
+}

@@ -6,7 +6,6 @@ export const createImage = async (imageData: { title: string, description: strin
     const newImage = new Image({
       ...imageData,
       likes: 0,
-      followers: [],
     });
     await newImage.save();
     return newImage;
@@ -34,6 +33,29 @@ export const updateImage = async (id: string, updateData: Partial<IImage>) => {
 // Delete an image
 export const deleteImage = async (id: string): Promise<IImage | null> => {
   return await Image.findByIdAndDelete(id);
+};
+
+export const likeImage = async (id: string, userId: string): Promise<IImage | null> => {
+  try {
+    const image = await Image.findById(id);
+    if (!image) throw new Error("Image not found");
+
+    if (image.likedBy.includes(userId)) {
+      // Unlike image
+      image.likes -= 1;
+      image.likedBy = image.likedBy.filter((id) => id !== userId);
+    } else {
+      // Like image
+      image.likes += 1;
+      image.likedBy.push(userId);
+    }
+
+    await image.save();
+    return image;
+  } catch (error) {
+    console.error("Error updating likes:", error);
+    throw error;
+  }
 };
 
 // command

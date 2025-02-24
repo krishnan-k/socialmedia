@@ -10,6 +10,8 @@ router.get("/imagesget/:id", imageController.getImageById);
 router.put("/imagesupdate/:id", imageController.updateImage);
 router.delete("/imagesdelete/:id", imageController.deleteImage);
 router.get("/imagesget", imageController.getAllImages);
+router.post("/imageslike/:id", imageController.likeImage);
+router.post("/imagesdislike/:id", imageController.dislikeImage);
 router.post('/imagespost/:id/comment', imageController.addComment);
 
 export default router;

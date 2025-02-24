@@ -5,6 +5,9 @@ export interface IImage extends Document {
   description: string;
   imageUrl: string;
   likes: number;
+  likedBy: string[];
+  dislikes: number;
+  dislikedBy: string[];
   comments: string[]; 
 }
 
@@ -14,7 +17,10 @@ const imageSchema: Schema = new Schema(
     description: { type: String, required: true },
     imageUrl: { type: String, required: true },
     likes: { type: Number, default: 0 },
-    comments: { type: [String], default: [] }, 
+    likedBy: { type: [String], default: [] },
+    dislikes: { type: Number, default: 0 }, 
+    dislikedBy: { type: [String], default: [] },
+    comments: { type: [String], default: [] },
   },
   { timestamps: true }
 );
